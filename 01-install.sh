@@ -7,5 +7,6 @@ LOCATION=$(realpath "$0")
 DIR=$(dirname "$LOCATION")
 
 helm repo add signoz https://charts.signoz.io
+helm repo update
 
 helm upgrade --install --create-namespace -n signoz signoz signoz/signoz
