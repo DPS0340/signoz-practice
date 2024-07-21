@@ -8,5 +8,4 @@ DIR=$(dirname "$LOCATION")
 
 helm repo add signoz https://charts.signoz.io
 
-kubectl create ns platform
-helm install -n platform signoz signoz/signoz
+helm upgrade --install --create-namespace -n signoz signoz signoz/signoz
